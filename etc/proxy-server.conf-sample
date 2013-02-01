@@ -33,7 +33,7 @@
 # eventlet_debug = false
 
 [pipeline:main]
-pipeline = catch_errors healthcheck cache ratelimit tempauth proxy-logging proxy-server
+pipeline = catch_errors healthcheck cache ratelimit list-endpoints tempauth proxy-logging proxy-server
 
 [app:proxy-server]
 use = egg:swift#proxy
@@ -311,6 +311,9 @@ use = egg:swift#name_check
 # forbidden_chars = '"`<>
 # maximum_length = 255
 # forbidden_regexp = /\./|/\.\./|/\.$|/\.\.$
+
+[filter:list-endpoints]
+use = egg:swift#list_endpoints
 
 [filter:proxy-logging]
 use = egg:swift#proxy_logging

@@ -179,3 +179,10 @@ Bulk Operations (Delete and Archive Auto Extraction)
     :members:
     :show-inheritance:
 
+
+List Endpoints
+==============
+
+.. automodule:: swift.common.middleware.list_endpoints
+    :members:
+    :show-inheritance:
